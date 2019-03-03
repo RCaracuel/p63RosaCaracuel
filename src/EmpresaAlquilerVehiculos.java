@@ -8,6 +8,6 @@
  *
  * @author Rosa
  */
-public class Empresa {
+public class EmpresaAlquilerVehiculos {
     
 }
