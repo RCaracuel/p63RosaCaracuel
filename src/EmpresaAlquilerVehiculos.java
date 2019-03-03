@@ -158,13 +158,13 @@ vehiculos puede contener hasta 100 elementos */
     public  void burbujaVehiculos(){
         Vehiculo auxiliar;
         int valor=0;
-        for (int i = 0; i <this.vehiculos.length; i++) {
-            for (int j =i+1; j <this.vehiculos.length; j++) {
-                valor=this.vehiculos[i].getMatricula().compareTo(this.vehiculos[j].getMatricula());
+        for (int i = 0; i <this.vehiculos.size(); i++) {
+            for (int j =i+1; j <this.vehiculos.size(); j++) {
+                valor=this.vehiculos.get(i).getMatricula().compareTo(this.vehiculos.get(j).getMatricula());
                 if(valor>0){//que [i] es mayor que [j]
-                    auxiliar=this.vehiculos[i];
-                    this.vehiculos[i]=this.vehiculos[j];
-                    this.vehiculos[j]=auxiliar;
+                    auxiliar=this.vehiculos.get(i);
+                    this.vehiculos.set(i, this.vehiculos.get(j));
+                    this.vehiculos.set(j, auxiliar);
                 }
             }
         }
