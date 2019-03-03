@@ -68,39 +68,32 @@ vehiculos puede contener hasta 100 elementos */
     
     
     //Método que rellene clientes aleatorios
-    public EmpresaAlquilerVehiculos rellenarClientes(EmpresaAlquilerVehiculos aux){
+    public void rellenarClientes(){
         
         for (int i = 0; i <this.clientes.size(); i++) {
             
-            aux.clientes.add(i, new Cliente());
+            this.clientes.add(i, new Cliente());
         }
-        return aux;
+        
     }
     
     //Método rellenar vehículos aleatorios
    
-    public EmpresaAlquilerVehiculos rellenarVehiculos(EmpresaAlquilerVehiculos aux){
+    public void rellenarVehiculos(){
         
         for (int i = 0; i <this.vehiculos.size(); i++) {
-            aux.vehiculos.add(i, new Vehiculo());
+            this.vehiculos.add(i, new Vehiculo());
         
         }
-        return aux;
+   
     }
+ 
     
-    //Método que rellene clientes aleatorios
-    public void rellenarClientes(){
-        
-        for (int i = 0; i <this.clientes.length; i++) {
-            this.clientes[i]=new Cliente();
-        }
-
-    }
     //método imprimir vehículos
     public void imprimirVehiculos() {
         System.out.println("Matricula\tModelo\tColor\tImporte\tDisponible\n");
-        for (int i = 0; i < this.vehiculos.length; i++) {
-            System.out.println(vehiculos[i].toString());
+        for (int i = 0; i < this.vehiculos.size(); i++) {
+            System.out.println(vehiculos.get(i).toString());
         }
     }
 
