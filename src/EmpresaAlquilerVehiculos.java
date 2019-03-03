@@ -55,15 +55,14 @@ vehiculos puede contener hasta 100 elementos */
 
     //método registrar vehículo
     public void registrarVehiculo(Vehiculo nuevo) {
-        this.vehiculos[this.totalVehiculos] = nuevo;
-        this.totalVehiculos++;
+        this.vehiculos.add(nuevo);
     }
 
     //Método imprimir clientes
     public void imprimirClientes() {
         System.out.println("NIF cliente\tNombre\n");
-        for (int i = 0; i < this.clientes.length; i++) {
-            System.out.println(clientes[i].getNif() + "\t" + clientes[i].getNombre());
+        for (int i = 0; i < this.clientes.size(); i++) {
+            System.out.println(clientes.get(i).getNif()+ "\t" + clientes.get(i).getNombre());
         }
     }
     
