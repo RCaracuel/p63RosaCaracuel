@@ -19,17 +19,17 @@ public class EmpresaAlquilerVehiculos {
     /* Atributos para controlar el total de clientes que tiene la
 empresa y array de almacenamiento para los objetos Cliente */
     private int totalClientes;
-    private ArrayList <Cliente> clientes;
+    private ArrayList <Cliente> clientes=new ArrayList<>(25);
     /* Atributos para controlar el total de vehiculos disponibles en
 alquiler que tiene la empresa y array de almacenamiento para los objetos
 Vehiculo */
     private int totalVehiculos;
-    private ArrayList <Vehiculo> vehiculos;
+    private ArrayList <Vehiculo> vehiculos=new ArrayList<>(25);
     /* Atributos para controlar el histórico de alquileres: total de
 alquileres realizados y array de almacenamiento para los objetos
 VehiculoAlquilado */
     private int totalAlquileres;
-    private VehiculoAlquilado[] alquileres;
+    private ArrayList<VehiculoAlquilado> alquileres=new ArrayList<>(100);
 // se omiten los métodos ‘get’ y ‘set’ de la clase
 /* Constructor parametrizado donde se establece que el total de clientes
 será 50, igual que el total de vehiculos disponibles. El histórico de
@@ -45,7 +45,7 @@ vehiculos puede contener hasta 100 elementos */
         this.vehiculos =new ArrayList<>(25); // apuntan a null
 // Incialmente no hay histórico de alquileres en la empresa
         this.totalAlquileres = 0;
-        this.alquileres = new VehiculoAlquilado[100]; // apuntan a null
+        this.alquileres = new ArrayList<>(100); // apuntan a null
     }
 
     //método registrarCliente
@@ -73,6 +73,7 @@ vehiculos puede contener hasta 100 elementos */
         for (int i = 0; i <this.clientes.size(); i++) {
             
             this.clientes.add(i, new Cliente());
+            
         }
         
     }
@@ -130,7 +131,7 @@ vehiculos puede contener hasta 100 elementos */
 // añoHoy(), cuya declaración no se incluye
         if (vehiculo.isDisponible()) {
             vehiculo.setDisponible(false);
-            this.alquileres[this.totalAlquileres] = new VehiculoAlquilado(cliente, vehiculo, 15, 3, 2018, dias);
+            this.alquileres.add(new VehiculoAlquilado(cliente, vehiculo, 15, 3, 2018, dias));
 
             this.totalAlquileres++;
         }
@@ -316,11 +317,11 @@ vehiculos puede contener hasta 100 elementos */
         this.totalAlquileres = totalAlquileres;
     }
 
-    public VehiculoAlquilado[] getAlquileres() {
+    public ArrayList<VehiculoAlquilado> getAlquileres() {
         return alquileres;
     }
 
-    public void setAlquileres(VehiculoAlquilado[] alquileres) {
+    public void setAlquileres(ArrayList <VehiculoAlquilado> alquileres) {
         this.alquileres = alquileres;
     }
 
