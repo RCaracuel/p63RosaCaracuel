@@ -284,11 +284,11 @@ vehiculos puede contener hasta 100 elementos */
         this.totalClientes = totalClientes;
     }
 
-    public Cliente[] getClientes() {
+    public ArrayList <Cliente> getClientes() {
         return clientes;
     }
 
-    public void setClientes(Cliente[] clientes) {
+    public void setClientes(ArrayList <Cliente> clientes) {
         this.clientes = clientes;
     }
 
@@ -300,11 +300,11 @@ vehiculos puede contener hasta 100 elementos */
         this.totalVehiculos = totalVehiculos;
     }
 
-    public Vehiculo[] getVehiculos() {
+    public ArrayList<Vehiculo> getVehiculos() {
         return vehiculos;
     }
 
-    public void setVehiculos(Vehiculo[] vehiculos) {
+    public void setVehiculos(ArrayList<Vehiculo> vehiculos) {
         this.vehiculos = vehiculos;
     }
 
@@ -337,7 +337,7 @@ vehiculos puede contener hasta 100 elementos */
       
         prueba.imprimirVehiculos();
         System.out.println("---------------------------------");
-        prueba.rellenarClientes(prueba);
+        prueba.rellenarClientes();
 
         prueba.rellenarVehiculos();
         prueba.imprimirVehiculos();
