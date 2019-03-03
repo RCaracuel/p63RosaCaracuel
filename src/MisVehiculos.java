@@ -9,5 +9,26 @@
  * @author Rosa
  */
 public class MisVehiculos {
-    
+    public static void main(String[] args) {
+         EmpresaAlquilerVehiculos prueba= new EmpresaAlquilerVehiculos("iouiuhi","Rosa","wwww.iowjfjhweof.com");
+        
+
+      
+        prueba.imprimirVehiculos();
+        System.out.println("---------------------------------");
+        prueba.rellenarClientes();
+
+        prueba.rellenarVehiculos();
+        prueba.imprimirVehiculos();
+        System.out.println("---------------------------------");
+        prueba.rellenarClientes();
+
+        prueba.imprimirClientes();
+        
+        System.out.println("------------------");
+        prueba.burbujaCliente();
+        System.out.println("ORDENADOS LOS CLIENTES");
+        prueba.imprimirClientes();
+      
+    }
 }
