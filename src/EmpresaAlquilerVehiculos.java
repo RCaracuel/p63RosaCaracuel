@@ -39,7 +39,6 @@ vehiculos puede contener hasta 100 elementos */
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;
 // Incialmente no hay clientes creados en la empresa
-        this.totalClientes = 0;
         this.clientes = new ArrayList<>(50); // apuntan a null
 // Incialmente no hay vehiculos creados en la empresa
         this.totalVehiculos = 0;
@@ -51,8 +50,7 @@ vehiculos puede contener hasta 100 elementos */
 
     //método registrarCliente
     public void registrarCliente(Cliente nuevo) {
-        this.clientes[this.totalClientes] = nuevo;
-        this.totalClientes++;
+        this.clientes.add(nuevo);
     }
 
     //método registrar vehículo
