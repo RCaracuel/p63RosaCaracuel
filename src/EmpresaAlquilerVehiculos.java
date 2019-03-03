@@ -110,9 +110,9 @@ vehiculos puede contener hasta 100 elementos */
 
     //Método getVehiculos
     private Vehiculo getVehiculo(String matricula) {
-        for (int i = 0; i < this.vehiculos.length; i++) {
-            if (this.vehiculos[i].getMatricula().equals(matricula)) {
-                return this.vehiculos[i];
+        for (int i = 0; i < this.vehiculos.size(); i++) {
+            if (this.vehiculos.get(i).getMatricula().equals(matricula)) {
+                return this.vehiculos.get(i);
             }
         }
         return null;
