@@ -175,7 +175,7 @@ vehiculos puede contener hasta 100 elementos */
 
         int mitad=0;
         int limiteInferior = 0;
-        int limiteSuperior = this.clientes.length-1;
+        int limiteSuperior = this.clientes.size()-1;
     
         int valor=0;
         
@@ -193,7 +193,7 @@ vehiculos puede contener hasta 100 elementos */
 //        }
         while((limiteInferior<=limiteSuperior)){
             mitad=(limiteInferior + limiteSuperior)/2;
-            valor=this.clientes[mitad].getNif().compareTo(aux);
+            valor=this.clientes.get(mitad).getNif().compareTo(aux);
 
             if(valor==0){
                 return mitad;
