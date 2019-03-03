@@ -39,10 +39,10 @@ vehiculos puede contener hasta 100 elementos */
         this.nombre = nombre;
         this.paginaWeb = paginaWeb;
 // Incialmente no hay clientes creados en la empresa
-        this.clientes = new ArrayList<>(50); // apuntan a null
+        this.clientes = new ArrayList<>(25); // apuntan a null
 // Incialmente no hay vehiculos creados en la empresa
         this.totalVehiculos = 0;
-        this.vehiculos =new ArrayList<>(50); // apuntan a null
+        this.vehiculos =new ArrayList<>(25); // apuntan a null
 // Incialmente no hay histórico de alquileres en la empresa
         this.totalAlquileres = 0;
         this.alquileres = new VehiculoAlquilado[100]; // apuntan a null
@@ -70,8 +70,9 @@ vehiculos puede contener hasta 100 elementos */
     //Método que rellene clientes aleatorios
     public EmpresaAlquilerVehiculos rellenarClientes(EmpresaAlquilerVehiculos aux){
         
-        for (int i = 0; i <this.clientes.length; i++) {
-            aux.clientes[i]=new Cliente();
+        for (int i = 0; i <this.clientes.size(); i++) {
+            
+            aux.clientes.add(i, new Cliente());
         }
         return aux;
     }
