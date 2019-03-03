@@ -99,9 +99,9 @@ vehiculos puede contener hasta 100 elementos */
 
     //Método getCliente
     private Cliente getCliente(String nif) {
-        for (int i = 0; i < this.clientes.length; i++) {
-            if (this.clientes[i].getNif().equals(nif)) {
-                return this.clientes[i];
+        for (int i = 0; i < this.clientes.size(); i++) {
+            if (this.clientes.get(i).getNif().equals(nif)) {
+                return this.clientes.get(i);
             }
 
         }
