@@ -216,13 +216,13 @@ vehiculos puede contener hasta 100 elementos */
         
         int mitad=0;
         int limiteInferior = 0;
-        int limiteSuperior = this.vehiculos.length-1;
+        int limiteSuperior = this.vehiculos.size()-1;
     
         int valor=0;
         
          while((limiteInferior<=limiteSuperior)){
             mitad=(limiteInferior + limiteSuperior)/2;
-            valor=this.vehiculos[mitad].getMatricula().compareTo(aux);
+            valor=this.vehiculos.get(mitad).getMatricula().compareTo(aux);
 
             if(valor==0){
                 return mitad;
