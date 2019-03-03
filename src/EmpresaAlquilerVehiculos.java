@@ -79,13 +79,13 @@ vehiculos puede contener hasta 100 elementos */
     
     //Método rellenar vehículos aleatorios
    
-    public void rellenarVehiculos(){
+    public EmpresaAlquilerVehiculos rellenarVehiculos(EmpresaAlquilerVehiculos aux){
         
-        for (int i = 0; i <this.vehiculos.length; i++) {
-            this.vehiculos[i]=new Vehiculo();
-         // System.out.println(aux.vehiculos[i]);
+        for (int i = 0; i <this.vehiculos.size(); i++) {
+            aux.vehiculos.add(i, new Vehiculo());
+        
         }
-        
+        return aux;
     }
     
     //Método que rellene clientes aleatorios
