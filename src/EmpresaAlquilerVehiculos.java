@@ -141,13 +141,13 @@ vehiculos puede contener hasta 100 elementos */
     public void burbujaCliente(){
         Cliente auxiliar;
         int valor=0;
-        for (int i = 0; i <this.clientes.length; i++) {
-            for (int j =i+1; j <this.clientes.length; j++) {
-                valor=this.clientes[i].getNif().compareToIgnoreCase(this.clientes[j].getNif());
+        for (int i = 0; i <this.clientes.size(); i++) {
+            for (int j =i+1; j <this.clientes.size(); j++) {
+                valor=this.clientes.get(i).getNif().compareToIgnoreCase(this.clientes.get(j).getNif());
                 if(valor>0){
-                    auxiliar=this.clientes[i];
-                    this.clientes[i]=this.clientes[j];
-                    this.clientes[j]=auxiliar;
+                    auxiliar=this.clientes.get(i);
+                    this.clientes.set(i, this.clientes.get(j));
+                    this.clientes.set(j, auxiliar);
                 }
             }
         }
