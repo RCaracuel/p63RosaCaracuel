@@ -61,7 +61,7 @@ vehiculos puede contener hasta 100 elementos */
     //Método imprimir clientes
     public void imprimirClientes() {
         System.out.println("NIF cliente\tNombre\n");
-        for (int i = 0; i < this.clientes.size(); i++) {
+        for (int i = 0; i < 25; i++) {
             System.out.println(clientes.get(i).getNif()+ "\t" + clientes.get(i).getNombre());
         }
     }
