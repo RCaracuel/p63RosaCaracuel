@@ -132,7 +132,7 @@ vehiculos puede contener hasta 100 elementos */
         if (vehiculo.isDisponible()) {
             vehiculo.setDisponible(false);
             this.alquileres.add(new VehiculoAlquilado(cliente, vehiculo, 15, 3, 2018, dias));
-
+            this.alquileres.forEach(System.out::println);
             this.totalAlquileres++;
         }
     }
