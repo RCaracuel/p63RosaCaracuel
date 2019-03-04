@@ -70,9 +70,9 @@ vehiculos puede contener hasta 100 elementos */
     //Método que rellene clientes aleatorios
     public void rellenarClientes(){
         
-        for (int i = 0; i <this.clientes.size(); i++) {
+        for (int i = 0; i <25; i++) {
             
-            this.clientes.add(i, new Cliente());
+            this.clientes.add(new Cliente());
             
         }
         
@@ -82,8 +82,8 @@ vehiculos puede contener hasta 100 elementos */
    
     public void rellenarVehiculos(){
         
-        for (int i = 0; i <this.vehiculos.size(); i++) {
-            this.vehiculos.add(i, new Vehiculo());
+         for (int i = 0; i <25; i++) {
+            this.vehiculos.add(new Vehiculo());
         
         }
    
